@@ -31,7 +31,7 @@ with tabs[1]:
 with tabs[2]:
     st.subheader('Target to speed')
     with st.container(border=True):
-        km = st.number_input('km',min_value=0.0, step=0.01, value=5)
+        km = st.number_input('km',min_value=0.0, step=0.01, value=5.0)
         target_minutes = st.number_input('minutes',key=2,min_value=0, step=1, value=30)
         
         speed = functions.target_to_speed(km=km,minutes=target_minutes)
