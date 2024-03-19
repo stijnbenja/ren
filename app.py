@@ -1,9 +1,12 @@
 import functions
 import streamlit as st
+st.title('Running converter')
 
-cols = st.columns(3)
+tabs = st.tabs(['Tempo to km/h', 'Km/h to tempo', 'Target to speed'])
 
-with cols[0]:
+
+
+with tabs[0]:
     st.subheader('Tempo to km/h')
     with st.container(border=True):
         minutes = st.number_input('minutes',min_value=0, max_value=60, step=1)
@@ -12,7 +15,7 @@ with cols[0]:
         st.subheader(f'{functions.tempo_to_kmh(minutes=minutes, seconds=seconds)} km/h')
         
 
-with cols[1]:
+with tabs[1]:
     st.subheader('Km/h to tempo')
     with st.container(border=True):
         kmh = st.number_input('km/h',min_value=0.0, value=10.0,max_value=60.0, step=0.1)
@@ -25,7 +28,7 @@ with cols[1]:
         
     
     
-with cols[2]:
+with tabs[2]:
     st.subheader('Target to speed')
     with st.container(border=True):
         km = st.number_input('km',min_value=0.0, step=0.01)
