@@ -1,6 +1,6 @@
 import functions
 import streamlit as st
-st.title('Running converter')
+st.title('🏃🏼‍♂️ Running converter')
 
 tabs = st.tabs(['Tempo to km/h', 'Km/h to tempo', 'Target to speed'])
 
